@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Itinerary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu is-active">
+        <a class="navbar-item" href="viewItinerary.html">
+          View Itinerary 
+        </a>
+      </div>
+    </nav>
+    <h1 class="title has-text-centered">Itinerary Inputs</h1>
+  <section>
+    Title<input class="input is-info is-normal is-hovered" type="text" placeholder="">
+    <h1></h1>
+<label for="dateofbirth">Date</label>
+<input type="date" name="dateofbirth" id="dateOfTravel">
+    
+   </section>
+    
+    <script src="js/viewItinerary.js"></script>
+  </body>
+
+</html>
