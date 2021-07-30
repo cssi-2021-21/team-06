@@ -15,6 +15,7 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="js/writeItinerary.js"></script>
 
   </head>
 
@@ -28,14 +29,18 @@
     </nav>
     <h1 class="title has-text-centered">Itinerary Inputs</h1>
   <section>
-    Title<input class="input is-info is-normal is-hovered" type="text" placeholder="">
-    <h1></h1>
-<label for="dateofbirth">Date</label>
-<input type="date" name="dateofbirth" id="dateOfTravel">
-    
+    Title<input class="input is-info is-normal is-hovered" id="itinTitle"type="text" placeholder="">
+    <h1></h1>   
+    <label for="dateofbirth">Date</label>
+    <input type="date" name="dateofbirth" id="dateOfTravel">
+    <h1>Description</h1>
+   <textarea id="itinDescription" class="textarea is-link" placeholder=" "></textarea>  
+    <div class="control">
+                <button class="button is-link has-text-weight-medium is-medium" onclick="handleItinSubmit()">Create Itinerary</button>
+              </div>
    </section>
     
-    <script src="js/viewItinerary.js"></script>
+    
   </body>
 
 </html>
