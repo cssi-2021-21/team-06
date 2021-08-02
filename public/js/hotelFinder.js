@@ -1,3 +1,5 @@
+//tested with restuarants, can change this to fit hotels when yelp api is working
+
 let businessList = [{
     name: "Four Barrels Coffee",
     rating: 3.5,
@@ -36,11 +38,11 @@ let businessList = [{
 }];
 
 // const submitButton = document.querySelector("#submitButton");
-let newHTML;
 
 const submitForm = () =>{
     const results = document.querySelector("#results");
     const inputText = document.querySelector("#inputText");
+    let newHTML = "";
     businessList.forEach(business =>{
         if(business.location.city === inputText.value){
             newHTML += `<div class="card cardColor">
@@ -58,4 +60,5 @@ const submitForm = () =>{
         }
     })
     results.innerHTML = newHTML;
+    inputText.value = null;
 }
