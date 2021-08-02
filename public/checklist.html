@@ -9,33 +9,56 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="checklist.css" type="text/css" />
      <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous"></script>
   </head>
+  
 
   <body>
-      
-    <div id="nav-placeholder"></div>
-    
-    <header>
-      <h1>To Do List</h1>
-      <input type="text" id="myInput" placeholder="Things to be done..." />
-      <span class="addBtn" id="add_button">Add</span>
-    </header>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+        <a href="index.html" class="navbar-item">
+            Home
+        </a>
+            <a  href="itinerary.html"  class="navbar-item">
+            Itinerary
+        </a>
+        <a  href="checklist.html"  class="navbar-item">
+            Checklist
+        </a>
+        </div>
+        <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+            <a class="button button-blue" onclick="signUp()">
+                <strong>Sign up</strong>
+            </a>
+            <a class="button is-light"onclick="logIn()">
+                Log in
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="myDIV" class="header">
+        <h2>Packing List</h2>
+
+        <input type="text" class ="myInput" placeholder="Item...">
+        <input type="text" class ="myQuant" placeholder="Quantity">
+        <span onclick="addElement()" class="addBtn">Add</span>
+    </div>
+
     <ul id="myUL">
+        <li>Shoe </li>
+        <li class="checked">Water Bottle</li>
+        <li>Food</li>
+        <li>Clothing</li>
+        <li>Books</li>
+        <li>Jacket</li>
+    </ul>
       
     </ul>
-    <!-- The link below is for the js file without using class  -->
-    <!-- <script src="script.js"></script> -->
-    
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    
-    <script>
-      $(function() {
-        $("#nav-placeholder").load("navbar.html");
-      });
-    </script>
-    
-   
+    <script src="js/checklist.js"></script>
   </body>
 </html>
