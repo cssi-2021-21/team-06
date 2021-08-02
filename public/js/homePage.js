@@ -4,7 +4,7 @@ const logIn = () => {
         var user = result.user;
         console.log("login successful");
         window.location = 'hotelFinder.html'; //for testing, can change later
-    }).cath((error) => {
+    }).catch((error) => {
         console.log("error was: ", error);
     })
 }

@@ -13,6 +13,32 @@ header {
   text-align: center;
 }
 
+.hotel{
+    background-color: #877B66 !important;
+    color: white;
+}
+
+.inputSearch{
+    width: 85%;
+    height: 50px;
+    padding: 10px;
+    clear: right;
+}
+
+.inputButton{
+    background-color: #98C1D9;
+    width: 15%;
+    height: 50px;
+    padding: 10px;
+    float: right;
+    color: white;
+}
+
+.inputButton:hover{
+    background-color: #D6FFB7;
+    color: black;
+}
+
 h1 {
   letter-spacing: 2px;
   margin-bottom: 15px;;
