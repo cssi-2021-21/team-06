@@ -16,18 +16,41 @@
   <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+   
     
 
   </head>
 
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu is-active">
-        <a class="navbar-item" href="viewItinerary.html">
-          View Itinerary 
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+        <a href="index.html" class="navbar-item">
+            Home
         </a>
-      </div>
-    </nav>
+            <a  href="itinerary.html"  class="navbar-item">
+            Itinerary
+        </a>
+        <a  href="checklist.html"  class="navbar-item">
+            Checklist
+        </a>
+        </div>
+        <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+            <a class="button button-blue" onclick="signUp()">
+                <strong>Sign up</strong>
+            </a>
+            <a class="button is-light"onclick="logIn()">
+                Log in
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <h2>View Itinerary</h2>
+    </div>
     <h1 class="title has-text-centered">Create Your Itinerary</h1>
   <section>
     Title<input class="input is-info is-normal is-hovered" id="itinTitle"type="text" placeholder="">
@@ -45,5 +68,7 @@
     <script src="js/viewItinerary.js"></script>
      <script src="js/writeItinerary.js"></script>
   </body>
+   <script src="js/writeItinerary.js"></script>
+     <script src="js/viewItinerary.js"></script>
 
 </html>
