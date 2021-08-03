@@ -3,6 +3,7 @@
 let queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
 
 const submitForm = () => {
+    document.querySelector('#results').innerHTML=""
     var inputLocation = document.querySelector("#locationText").value
     $.ajax({
     url: queryURL,
@@ -33,8 +34,37 @@ const submitForm = () => {
                        var state = item.location.state;
                        var zipcode = item.location.zip_code;
                        // Append our result into our page
-                       $('#results').append('<div id="' + id + '" style="margin-top:50px;margin-bottom:50px;"><img src="' + image + '" style="width:200px;height:150px;"><br>We found <b>' + name + '</b> (' + alias + ')<br>Business ID: ' + id + '<br> Located at: ' + address + ' ' + city + ', ' + state + ' ' + zipcode + '<br>The phone number for this business is: ' + phone + '<br>This business has a rating of ' + rating + ' with ' + reviewcount + ' reviews.</div>');
-
-     })
+                     document.querySelector('#results').innerHTML +=  createHotelCard(image, name, rating, reviewcount, address, city, state, zipcode, phone);//`<div id= ${id}  style='margin-top:50px;margin-bottom:50px;'> <img src=${image} style='width:200px;height:150px;'><br>We found <b> ${name} </b> (${alias})<br>Business ID:${id} <br> Located at: ${address} ${city} ${state} ${zipcode}<br>The phone number for this business is: ${phone} <br></div>`
+ })
     });
+}
+
+
+const createHotelCard = (image, name, rating, reviewcount, address, city, state, zipcode, phone) =>{
+    return `
+     <div>
+     <div class="card">
+        <div class="card-image">
+            <figure class="image is-4by3">
+            <img src=${image} alt="Placeholder image">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
+            <div class="media-content">
+                <p class="title is-4">${name}</p>
+                <p class="subtitle is-6">${rating}/5 (${reviewcount} reviews)</p>
+            </div>
+            </div>
+
+            <div class="content">
+            ${address} ${city}, ${state} ${zipcode}
+            <br>
+            <a>${phone}</a>
+            </div>
+        </div>
+    </div>
+    </div>
+`;
+
 }
