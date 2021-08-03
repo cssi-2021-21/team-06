@@ -14,16 +14,33 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
     <link rel="stylesheet" href="checklist.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
      <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous"></script>
   </head>
   
 
   <body>
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+   
+        <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggPzmNN3LNo2eqp58TRyoL2aZmRjfnz2JmqPaUx0I0_NJ20rMClhwUbdXt8J8CuUE44A&usqp=CAU" width="40" height="50">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+        </div>
+
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
         <a href="index.html" class="navbar-item">
             Home
         </a>
+
+        
             <a  href="Itinerary.html"  class="navbar-item">
             Itinerary
         </a>
@@ -31,22 +48,25 @@
             Checklist
         </a>
         <a  href="hotelFinder.html"  class="navbar-item">
-             Hotel Finder
+            Hotel Finder
         </a>
         </div>
-        <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-            <a class="button button-blue" onclick="signUp()">
-                <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"onclick="logIn()">
-                Log in
-            </a>
-            </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button button-blue" onclick="signUp()">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light"onclick="logIn()">
+            Log in
+          </a>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
+</nav>
+    
 
     <div id="myDIV" class="header">
         <h2>Packing List</h2>
