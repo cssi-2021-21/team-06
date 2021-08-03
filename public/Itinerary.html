@@ -20,38 +20,61 @@
     
 
   </head>
+   <body class="backgroundBrown">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggPzmNN3LNo2eqp58TRyoL2aZmRjfnz2JmqPaUx0I0_NJ20rMClhwUbdXt8J8CuUE44A&usqp=CAU" width="40" height="50">
+    </a>
 
-  <body>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-        <a href="index.html" class="navbar-item">
-            Home
-        </a>
-            <a  href="itinerary.html"  class="navbar-item">
-            Itinerary
-        </a>
-        <a  href="checklist.html"  class="navbar-item">
-            Checklist
-        </a>
-        </div>
-        <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-            <a class="button button-blue" onclick="signUp()">
-                <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"onclick="logIn()">
-                Log in
-            </a>
-            </div>
-        </div>
-        </div>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="index.html" class="navbar-item">
+        Home
+      </a>
+        <a  href="Itinerary.html"  class="navbar-item">
+        Itinerary
+      </a>
+       <a  href="checklist.html"  class="navbar-item">
+        Checklist
+      </a>
+      <a  href="hotelFinder.html"  class="navbar-item">
+             Hotel Finder
+       </a>
     </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button button-blue" onclick="signUp()">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light"onclick="logIn()">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+   <section class="hero is-small notification is-info has-text-centered background-grad hotel">
+      <div class="hero-body">
+        <p class="title">
+       Create Itinerary
+        </p>
+      </div>
+    </section>
 
     <div class="header is-centered">
         <button id="viewItinButton" class="button is-link has-text-weight-medium is-medium">View Itinerary</button>
     </div>
-    <h1 class="title has-text-centered">Create Your Itinerary</h1>
   <section>
     Title<input class="input is-info is-normal is-hovered" id="itinTitle"type="text" placeholder="">
     <h1></h1>   
