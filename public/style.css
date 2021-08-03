@@ -132,4 +132,9 @@ input {
 
 .backgroundBrown {
     background-color: #e7d0b2 !important;
+.wrapper {
+    margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
