@@ -1,3 +1,4 @@
+
 let googleUser;
   const itinTitle = document.querySelector('#itinTitle');
   const dateOfTravel = document.querySelector('#dateOfTravel').value;
