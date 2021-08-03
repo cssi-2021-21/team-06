@@ -2,6 +2,7 @@ let googleUser;
   const itinTitle = document.querySelector('#itinTitle');
   const dateOfTravel = document.querySelector('#dateOfTravel').value;
   const itinDescription = document.querySelector('#itinDescription');
+  console.log(dateOfTravel)
 
 const handleItinSubmit = (itinTitle, dateOfTravel, itinDescription) => {
   // 1. Format the data and write it to our database
