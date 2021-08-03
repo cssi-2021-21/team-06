@@ -1,64 +1,40 @@
 //tested with restuarants, can change this to fit hotels when yelp api is working
 
-let businessList = [{
-    name: "Four Barrels Coffee",
-    rating: 3.5,
-    url: "https://www.yelp.com/biz/four-barrel-coffee-san-francisco",
-    image_url: "https://media.self.com/photos/5f189b76c58e27c99fbef9e3/1:1/w_768,c_limit/blackberry-vanilla-french-toast.jpg",
-    phone: "+14152520800",
-    location: {
-        city: "San Francisco",
-        state: "CA"
-    },
-    price: "$$"
-},
-{
-    name: "The Hideout Kitchen",
-    rating: 2,
-    url: "https://www.yelp.com/biz/the-hideout-kitchen-lafayette-3?osq=Restaurants",
-    image_url: "https://media.self.com/photos/5f189b76c58e27c99fbef9e3/1:1/w_768,c_limit/blackberry-vanilla-french-toast.jpg",
-    phone: "+14152520800",
-    location: {
-        city: "Lafayette",
-        state: "CA"
-    },
-    price: "$$"
-},
-{
-    name: "Postino",
-    rating: 5,
-    url: "https://www.yelp.com/biz/postino-lafayette-2?osq=postinos",
-    image_url: "https://media.self.com/photos/5f189b76c58e27c99fbef9e3/1:1/w_768,c_limit/blackberry-vanilla-french-toast.jpg",
-    phone: "+14152520800",
-    location: {
-        city: "Lafayette",
-        state: "CA"
-    },
-    price: "$$$"
-}];
+let queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
 
-// const submitButton = document.querySelector("#submitButton");
+const submitForm = () => {
+    var inputLocation = document.querySelector("#locationText").value
+    $.ajax({
+    url: queryURL,
+    method: "GET",
+    headers: {
+        "accept": "application/json",
+        "x-requested-with": "xmlhttprequest",
+        "Access-Control-Allow-Origin": "*",
+        "Authorization": `Bearer ${apiKey}`
+    },
+    data: {
+        term: 'hotel',
+        location: inputLocation,
+    }
+}).then(function (res) {
+   // let results = res.data
+    console.log(res);
+     $.each(res.businesses, function(i, item) {
+          var id = item.id;
+                       var alias = item.alias;
+                       var phone = item.display_phone;
+                       var image = item.image_url;
+                       var name = item.name;
+                       var rating = item.rating;
+                       var reviewcount = item.review_count;
+                       var address = item.location.address1;
+                       var city = item.location.city;
+                       var state = item.location.state;
+                       var zipcode = item.location.zip_code;
+                       // Append our result into our page
+                       $('#results').append('<div id="' + id + '" style="margin-top:50px;margin-bottom:50px;"><img src="' + image + '" style="width:200px;height:150px;"><br>We found <b>' + name + '</b> (' + alias + ')<br>Business ID: ' + id + '<br> Located at: ' + address + ' ' + city + ', ' + state + ' ' + zipcode + '<br>The phone number for this business is: ' + phone + '<br>This business has a rating of ' + rating + ' with ' + reviewcount + ' reviews.</div>');
 
-const submitForm = () =>{
-    const results = document.querySelector("#results");
-    const inputText = document.querySelector("#inputText");
-    let newHTML = "";
-    businessList.forEach(business =>{
-        if(business.location.city === inputText.value){
-            newHTML += `<div class="card cardColor">
-            <h1 class="title">${business.name}</h1>
-            <h2>Rating: ${business.rating} stars</h2>
-            <div class="card-content">
-                <h2 class="bigFont">Location: ${business.location.city}, ${business.location.state}</h2>
-                <h2 class="bigFont">Price: ${business.price}</h2>
-                <h2 class="bigFont">Phone: ${business.phone}</h2>
-            </div>
-            <div class="media pic-size">
-                <img src="${business.image_url}"/>
-            </div>
-            </div>`
-        }
-    })
-    results.innerHTML = newHTML;
-    inputText.value = null;
+     })
+    });
 }
