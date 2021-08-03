@@ -1,3 +1,17 @@
+let googleUser = "CihZifpVyNT4E2Phc3paZYQ6Nf62";
+
+//added function here
+const addToDatabase = (input, quantityItem) => {
+    firebase.database().ref(`users/${googleUser}/checklist`).push({
+        item: input.value,
+        quantity: quantityItem.value
+    });
+}
+
+// const deleteItem = (item) => {
+//     firebase.database().ref(`users/${googleUser}/checklist/${item}`).remove();
+// }
+
 
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -32,6 +46,7 @@ function addElement() {
   }else{
         var t = document.createTextNode(myInput.value);
   }
+  addToDatabase(myInput, inputQuantity);
  
   li.appendChild(t);
   if (myInput.value === '') {

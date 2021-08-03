@@ -71,7 +71,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #C8A2C8;
+  background-color: #C8A2C8 !important;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -108,7 +108,7 @@ input.myQuant{
 /* Style the "Add" button */
 .addBtn {
   padding: 7px;
-  width: 25%;
+  width: 20%;
   background: #d9d9d9;
   color: #555;
   float: left;
@@ -121,4 +121,14 @@ input.myQuant{
 
 .addBtn:hover {
   background-color: #bbb;
+}
+
+body {
+  padding: 4em;
+  background: #e5e5e5;
+  font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+.backgroundWhite {
+    background-color: white !important;
 }
