@@ -1,4 +1,4 @@
-console.log("running");
+//tested with restuarants, can change this to fit hotels when yelp api is working
 
 let queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search";
 

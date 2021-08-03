@@ -13,9 +13,10 @@
      <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-    <script src="js/writeItinerary.js"></script>
+    
 
   </head>
 
@@ -27,7 +28,7 @@
         </a>
       </div>
     </nav>
-    <h1 class="title has-text-centered">Itinerary Inputs</h1>
+    <h1 class="title has-text-centered">Create Your Itinerary</h1>
   <section>
     Title<input class="input is-info is-normal is-hovered" id="itinTitle"type="text" placeholder="">
     <h1></h1>   
@@ -36,8 +37,9 @@
     <h1>Description</h1>
    <textarea id="itinDescription" class="textarea is-link" placeholder=" "></textarea>  
     <div class="control">
-                <button class="button is-link has-text-weight-medium is-medium" onclick="handleItinSubmit()">Create Itinerary</button>
-              </div>
+        <button id="createItin" class="button is-link has-text-weight-medium is-medium" onclick="handleItinSubmit()">Create Itinerary</button>
+    </div>
+
    </section>
     
     
