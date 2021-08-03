@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.subtitle {
+    margin-top: 10px;
+}
+
 /* Style the header */
 header {
   background: rgb(146, 146, 253);
@@ -120,4 +124,12 @@ input {
 .bigFont{
     font-size: 24px !important;
     padding: 5px;
+}
+
+.backgroundBlue {
+    background-color: #cfeafa !important;
+}
+
+.backgroundBrown {
+    background-color: #e7d0b2 !important;
 }

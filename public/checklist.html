@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip Planner</title>
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
@@ -49,6 +53,7 @@
 
         <input type="text" class ="myInput" placeholder="Item...">
         <input type="text" class ="myQuant" placeholder="Quantity">
+        <input class="input is-normal" id="itemID" type="hidden">
         <span onclick="addElement()" class="addBtn">Add</span>
     </div>
 
