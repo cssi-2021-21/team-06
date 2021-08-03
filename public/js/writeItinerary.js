@@ -1,15 +1,28 @@
 let googleUser;
-  const itinTitle = document.querySelector('#itinTitle');
-  const dateOfTravel = document.querySelector('#dateOfTravel').value;
-  const itinDescription = document.querySelector('#itinDescription');
-  console.log(dateOfTravel)
+  window.onload = (event) => {
+  // Use this to retain user state between html pages.
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log('Logged in as: ' + user.displayName);
+      googleUser = user;
+    } else {
+      window.location = 'index.html'; // If not logged in, navigate back to login page.
+    }
+  });
+};
 
-const handleItinSubmit = (itinTitle, dateOfTravel, itinDescription) => {
+const handleItinSubmit = () => {
+  const itinTitle = document.querySelector('#itinTitle').value;
+  const dateOfTravel = document.querySelector('#dateOfTravel').value;
+  const itinDescription = document.querySelector('#itinDescription').value;
+  console.log(dateOfTravel)
+  console.log(itinTitle)
+  console.log(itinDescription)
   // 1. Format the data and write it to our database
   firebase.database().ref(`users/${googleUser.uid}`).push({
-    title: itinTitle.value,
-    date: dateOfTravel.value,
-    description: itinDescription.value
+    title: itinTitle,
+    date: dateOfTravel,
+    description: itinDescription
   }).catch((error) => {
   console.error(error);
 })

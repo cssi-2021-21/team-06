@@ -13,38 +13,73 @@
      <script src="https://kit.fontawesome.com/29ee0bc57e.js" crossorigin="anonymous"></script>
   </head>
   
+   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+    <a class="navbar-item" href="index.html">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggPzmNN3LNo2eqp58TRyoL2aZmRjfnz2JmqPaUx0I0_NJ20rMClhwUbdXt8J8CuUE44A&usqp=CAU" width="40" height="50">
+    </a>
 
-  <body>
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-        <a href="index.html" class="navbar-item">
-            Home
-        </a>
-            <a  href="itinerary.html"  class="navbar-item">
-            Itinerary
-        </a>
-        <a  href="checklist.html"  class="navbar-item">
-            Checklist
-        </a>
-        </div>
-        <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-            <a class="button button-blue" onclick="signUp()">
-                <strong>Sign up</strong>
-            </a>
-            <a class="button is-light"onclick="logIn()">
-                Log in
-            </a>
-            </div>
-        </div>
-        </div>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="index.html" class="navbar-item">
+        Home
+      </a>
+
+     
+        <a  href="Itinerary.html"  class="navbar-item">
+        Itinerary
+      </a>
+       <a  href="checklist.html"  class="navbar-item">
+        Checklist
+      </a>
+       <a  href="hotelFinder.html"  class="navbar-item">
+        Hotel Finder
+      </a>
     </div>
 
-    <div class="header">
-        <h2>View Itinerary</h2>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button button-blue" onclick="signUp()">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light"onclick="logIn()">
+            Log in
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
+</nav>
+    
+    <section class="hero is-small notification is-info has-text-centered background-grad">
+      <div class="hero-body">
+        <p class="title">
+       Trip Planner
+        </p>
+      </div>
 
+      <div class="container">
+      <div class="section">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h1 class="title"></h1><br>
+          </div>
+        </div>
+        <div id="app" class="columns is-multiline">
+          <!-- Note cards will render here -->
+        </div>
+    </section>
+   
+  </body>
     
 
 
