@@ -10,13 +10,6 @@ window.onload = (event) => {
     };
   });
 };
-
-const viewItinButton = document.querySelector("#viewItinButton")
-
-viewItinButton.addEventListener("click", () => {
-    window.location.href = "viewItinerary.html"
-})
-
 const getItin = (userId) => {
   const itinRef = firebase.database().ref(`users/${userId}`);
   itinRef.on('value', (snapshot) => {
@@ -24,6 +17,10 @@ const getItin = (userId) => {
     renderDataAsHtml(data);
   });
 };
+
+
+
+
 
 const renderDataAsHtml = (data) => {
   let cards = ``;
@@ -50,3 +47,5 @@ const createItinCard = (itin,itinId) => {
     </div>
   `;
 }
+
+
