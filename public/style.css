@@ -129,10 +129,6 @@ input {
 .backgroundBlue {
     background-color: #cfeafa !important;
 }
-
-.backgroundBrown {
-    background-color: #e7d0b2 !important;
-}
     
 .wrapper {
     margin: 20px;
@@ -143,4 +139,10 @@ input {
 
 .card:hover{
     top: -5px;
+}
+
+.container {
+    /* remember to set a width */
+    margin-right: auto;
+    margin-left: auto;
 }
