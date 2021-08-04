@@ -30,9 +30,9 @@ console.log(googleUser);
 })
   // 2. Clear the form so that we can write a new note
   .then(() => {
-    itinTitle.value = " ";
-    dateOfTravel.value = " ";
-    itinDescription.value = " ";
+    document.getElementById("dateOfTravel").value = null;
+    document.getElementById("itinTitle").value = null;
+    document.getElementById("itinDescription").value = null;
   });
 }
 
