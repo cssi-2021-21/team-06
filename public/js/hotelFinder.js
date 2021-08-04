@@ -75,7 +75,7 @@ const createHotelCard = (image, name, rating, reviewcount, address, city, state,
 }
 
 const openYelp = (url) =>{
-    window.location = url;
+    window.open(url, '_blank');
 }
 
 const openTab = (type) =>{
