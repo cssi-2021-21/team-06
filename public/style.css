@@ -136,3 +136,9 @@ input {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
+
+.container {
+    /* remember to set a width */
+    margin-right: auto;
+    margin-left: auto;
+}

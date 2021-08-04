@@ -1,4 +1,3 @@
-
 let googleUser;
   window.onload = (event) => {
   // Use this to retain user state between html pages.
@@ -20,7 +19,7 @@ const handleItinSubmit = () => {
   console.log(itinTitle)
   console.log(itinDescription)
   // 1. Format the data and write it to our database
-  firebase.database().ref(`users/${googleUser.uid}`).push({
+  firebase.database().ref(`users/${googleUser}`).push({
     title: itinTitle,
     date: dateOfTravel,
     description: itinDescription
