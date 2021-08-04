@@ -102,10 +102,6 @@ label {
     font-size: 24px !important;
     padding: 5px;
 }
-
-.backgroundBlue {
-    background-color: #cfeafa !important;
-}
     
 .wrapper {
     margin: 20px;
@@ -129,7 +125,7 @@ label {
 }
 
 .tableWidth {
-    width: 100%
+    width: 100%;
 }
 
 #viewItinButton {
@@ -160,3 +156,6 @@ input {
     background-color: #cfeafa;
 }
 
+.greenBackground{
+    background-color: #a7d698 !important;
+}
