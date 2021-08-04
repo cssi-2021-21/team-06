@@ -263,3 +263,15 @@ input.myQuant{
 .backgroundWhite {
     background-color: white !important;
 }
+
+input.itinTitle {
+ margin-right: auto;
+ margin-left: auto;
+  border: none;
+  border-radius: 0;
+  width: 60%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
