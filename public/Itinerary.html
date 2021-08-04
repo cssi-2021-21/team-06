@@ -9,7 +9,9 @@
     <title>Itinerary</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
      <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -69,12 +71,13 @@
         <p class="title">
        Create Itinerary
         </p>
+        <div class="header">
+        <button id="viewItinButton" class="button is-link has-text-weight-medium is-medium has-text-centered">View Itinerary</button>
+    </div>
       </div>
     </section>
 
-    <div class="header">
-        <button id="viewItinButton" class="button is-link has-text-weight-medium is-medium">View Itinerary</button>
-    </div>
+    
   <section>
     Title<input class="input is-info is-normal is-hovered is-rounded" id="itinTitle"type="text" placeholder="">
     <h1></h1>   
@@ -90,6 +93,5 @@
     
   </body>
    <script src="js/writeItinerary.js"></script>
-    <script src="js/viewItinerary.js"></script>
 
 </html>

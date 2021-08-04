@@ -10,13 +10,6 @@ window.onload = (event) => {
     };
   });
 };
-
-const viewItinButton = document.querySelector("#viewItinButton")
-
-viewItinButton.addEventListener("click", () => {
-    window.location.href = "viewItinerary.html"
-})
-
 const getItin = (userId) => {
   const itinRef = firebase.database().ref(`users/${userId}`);
   itinRef.on('value', (snapshot) => {
@@ -25,18 +18,22 @@ const getItin = (userId) => {
   });
 };
 
+
+
+
+
 const renderDataAsHtml = (data) => {
   let cards = ``;
   for (const itinItem in data ){
     const itin = data[itinItem];
     // For each note create an HTML card
-    cards += createItinCard(itin, itinItem)
+    cards += createItinTable(itin, itinItem)
   };
   // Inject our string of HTML into our viewNotes.html page
   document.querySelector('#app').innerHTML = cards;
 };
 
-const createItinCard = (itin,itinId) => {
+/*const createItinCard = (itin,itinId) => {
   return `
     <div class="column is-one-quarter">
       <div class="card">
@@ -49,4 +46,16 @@ const createItinCard = (itin,itinId) => {
       </div>
     </div>
   `;
+}*/
+
+const createItinTable = (itin, itinId) => {
+    return `
+      <tr>
+          <th>${itin.date}</th>
+          <td><title="${itin.title}">${itin.title}<strong></strong></td>
+          <td>${itin.description}</td>
+      </tr>
+  `
 }
+
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background:#efe7db">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,7 +27,7 @@
   </head>
   
 
-  <body  style="background:#efe7db">
+  <body>
      <nav class="navbar" role="navigation" aria-label="main navigation">
    
         <div class="navbar-brand">
@@ -73,24 +73,17 @@
   </div>
 </nav>
     
-   <section id="hotelPage" class="hero is-small notification is-info has-text-centered background-grad hotel">
+
+    <section class="hotel hero is-small notification is-info has-text-centered background-grad">
       <div class="hero-body">
         <p class="title">
         Hotel Finder
         </p>
       </div>
+    </section>
 
-    <div class="tabs is-centered">
-      <ul>
-        <li href="#" onclick="openTab('Hotels')"><a>Hotels</a></li>
-        <li><a href="#" onclick="openTab('Restaurants')">Restaurants</a></li>
-        <li><a href="#" onclick="openTab('Shopping')">Shopping</a></li>
-      </ul>
-    </div>
 
-</section>
-
-     <div>
+      <div>
         <form>
             <input type="text" class="inputSearch" placeholder="enter a location" id="locationText">
             <input type="button" value="submit" class="inputButton" id="submitButton" onclick="submitForm()">
@@ -99,19 +92,5 @@
      <div id="results" class="wrapper">
          
      </div>
-
-   </body>
-
-  <footer style="background-color:#e7d0b2;" class="footer is-info mt-5 mb-0 hidden" id="foot">
-    <div class="content has-text-centered">
-      <p class="subtitle">
-         <a href="#" onclick="showMore()">see more...</a>
-      </p>
-    </div>
-  </footer>
-
-   <!-- <footer class="hidden" id="foot">
-       <a href="#" onclick="showMore()">see more...</a>
-   </footer> -->
-
- </html>
+  </body>
+</html>

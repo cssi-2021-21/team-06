@@ -5,6 +5,7 @@ let googleUser;
     if (user) {
       console.log('Logged in as: ' + user.displayName);
       googleUser = user;
+      console.log(googleUser)
     } else {
       window.location = 'index.html'; // If not logged in, navigate back to login page.
     }
@@ -18,8 +19,9 @@ const handleItinSubmit = () => {
   console.log(dateOfTravel)
   console.log(itinTitle)
   console.log(itinDescription)
+console.log(googleUser);
   // 1. Format the data and write it to our database
-  firebase.database().ref(`users/${googleUser}`).push({
+  firebase.database().ref(`users/${googleUser.uid}`).push({
     title: itinTitle,
     date: dateOfTravel,
     description: itinDescription
@@ -28,8 +30,13 @@ const handleItinSubmit = () => {
 })
   // 2. Clear the form so that we can write a new note
   .then(() => {
-    itinTitle.value = "";
-    dateOfTravel.value = "";
-    itinDescription.value = "";
+    itinTitle.value = " ";
+    dateOfTravel.value = " ";
+    itinDescription.value = " ";
   });
 }
+
+const viewItinButton = document.querySelector("#viewItinButton")
+viewItinButton.addEventListener("click", () => {
+    window.location.href = "viewItinerary.html"
+}) 
