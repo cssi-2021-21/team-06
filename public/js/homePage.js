@@ -3,7 +3,7 @@ const logIn = () => {
     firebase.auth().signInWithPopup(provider).then((result) => {
         var user = result.user;
         console.log("login successful");
-        window.location = 'hotelFinder.html'; //for testing, can change later
+        document.querySelector("#welcome").innerHTML = `<p class="subtitle">Welcome Back ${user.displayName}! :D</p>`;
     }).catch((error) => {
         console.log("error was: ", error);
     })

@@ -1,4 +1,6 @@
 let googleUserId;
+//var newDate;
+//let newDateArr;
 window.onload = (event) => {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -10,6 +12,7 @@ window.onload = (event) => {
     };
   });
 };
+
 const getItin = (userId) => {
   const itinRef = firebase.database().ref(`users/${userId}`);
   itinRef.on('value', (snapshot) => {
@@ -18,6 +21,11 @@ const getItin = (userId) => {
   });
 };
 
+/*const sortDate = (oldDate) => {
+    var d = new Date(oldDate)
+    newDateArr.push((d.getTime()-d.getMilliseconds())/1000);
+    console.log(newDate);
+}*/
 
 
 
@@ -26,6 +34,7 @@ const renderDataAsHtml = (data) => {
   let cards = ``;
   for (const itinItem in data ){
     const itin = data[itinItem];
+    //sortDate(itin.date)
     // For each note create an HTML card
     cards += createItinTable(itin, itinItem)
   };
@@ -33,25 +42,11 @@ const renderDataAsHtml = (data) => {
   document.querySelector('#app').innerHTML = cards;
 };
 
-/*const createItinCard = (itin,itinId) => {
-  return `
-    <div class="column is-one-quarter">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">${itin.title}</p>
-        </header>
-        <div class="card-content">
-          <div class="content">${itin.text}</div>
-        </div>
-      </div>
-    </div>
-  `;
-}*/
-
 const createItinTable = (itin, itinId) => {
     return `
       <tr>
           <th>${itin.date}</th>
+          <th>${itin.time}</th>
           <td><title="${itin.title}">${itin.title}<strong></strong></td>
           <td>${itin.description}</td>
       </tr>
