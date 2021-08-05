@@ -41,7 +41,7 @@ header {
 }
 
 .inputButton:hover{
-    background-color: #D6FFB7;
+    background-color: #99AAE8;
     color: black;
 }
 
@@ -158,4 +158,8 @@ input {
 
 .greenBackground{
     background-color: #a7d698 !important;
+}
+
+.padTop{
+    margin-top: 15px;
 }
