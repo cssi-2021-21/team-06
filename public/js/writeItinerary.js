@@ -5,7 +5,7 @@ let googleUser;
     if (user) {
       console.log('Logged in as: ' + user.displayName);
       googleUser = user;
-      console.log(googleUser)
+      //console.log(googleUser)
     } else {
       window.location = 'index.html'; // If not logged in, navigate back to login page.
     }
@@ -16,15 +16,19 @@ const handleItinSubmit = () => {
   const itinTitle = document.querySelector('#itinTitle').value;
   const dateOfTravel = document.querySelector('#dateOfTravel').value;
   const itinDescription = document.querySelector('#itinDescription').value;
+  const timeOfTravel = document.querySelector('#timeOfTravel').value;
+
   console.log(dateOfTravel)
   console.log(itinTitle)
   console.log(itinDescription)
-console.log(googleUser);
+console.log(timeOfTravel);
+//console.log(googleUser);
   // 1. Format the data and write it to our database
   firebase.database().ref(`users/${googleUser.uid}`).push({
     title: itinTitle,
     date: dateOfTravel,
-    description: itinDescription
+    description: itinDescription,
+    time: timeOfTravel
   }).catch((error) => {
   console.error(error);
 })
@@ -33,6 +37,7 @@ console.log(googleUser);
     document.getElementById("dateOfTravel").value = null;
     document.getElementById("itinTitle").value = null;
     document.getElementById("itinDescription").value = null;
+    document.getElementById("timeOfTravel").value = null;
   });
 }
 

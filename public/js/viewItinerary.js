@@ -33,25 +33,11 @@ const renderDataAsHtml = (data) => {
   document.querySelector('#app').innerHTML = cards;
 };
 
-/*const createItinCard = (itin,itinId) => {
-  return `
-    <div class="column is-one-quarter">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">${itin.title}</p>
-        </header>
-        <div class="card-content">
-          <div class="content">${itin.text}</div>
-        </div>
-      </div>
-    </div>
-  `;
-}*/
-
 const createItinTable = (itin, itinId) => {
     return `
       <tr>
           <th>${itin.date}</th>
+          <th>${itin.time}</th>
           <td><title="${itin.title}">${itin.title}<strong></strong></td>
           <td>${itin.description}</td>
       </tr>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
   
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     
      <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
@@ -71,20 +73,23 @@
         <p class="title has-text-centered">
        Create Itinerary
         </p>
-        <button id="viewItinButton" style="background:#536b7b" class="button is-link is-medium has-text-centered">View Itinerary</button>
+        <button id="viewItinButton" style="background:#536b7b" class="button is-link is-medium has-text-centered">View Itinerary</butcs tton>
       </div>
     </section>
 
     
   <section>
     <h1>Title</h1> 
-    <input class="input is-info is-normal is-hovered" type="text" placeholder="enter your title"id="itinTitle"/>
+    <input class="input is-info is-normal is-hovered" type="text" placeholder="Enter your title"id="itinTitle"/>
     <label for="dateofbirth">Date</label>
     <input type="date" name="dateofbirth" id="dateOfTravel">
+    <label for="appt">Time: </label>
+
+    <input type="time" id="timeOfTravel" name="appt" min="09:00" max="18:00" required>    
     <h1>Description</h1>
    <textarea id="itinDescription" class="textarea is-link" placeholder=" "></textarea>  
     <div class="control has-text-centered">
-        <button id="createItin" style="background:#536b7b" class="button is-link is-medium" onclick="handleItinSubmit()">Create Itinerary</button>
+        <button id="createItin" style="background:#536b7b" class="button is-link is-medium" onclick="handleItinSubmit()">Add Event to Itinerary</button>
     </div>
 
    </section>
