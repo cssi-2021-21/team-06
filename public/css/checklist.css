@@ -88,6 +88,7 @@ input.myQuant{
 
 /* Style the "Add" button 7, 20, 16 font*/
 .addBtn {
+  margin-top: 5px;
   padding: 10px; 
   width: 20%;
   background: #d9d9d9;
